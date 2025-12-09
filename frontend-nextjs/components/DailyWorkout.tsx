@@ -7,7 +7,7 @@ export default function DailyWorkout({ user }: { user: any }) {
   const [dayOffset, setDayOffset] = useState(0);
 
   const generate = async () => {
-    const res = await fetch("http://localhost:5000/api/daily-workout", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/daily-workout`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ user, day_offset: dayOffset })

@@ -48,7 +48,7 @@ export default function WeightForm() {
 const predict = async () => {
   setLoading(true);
   try {
-    const endpoint = "http://localhost:5000/api/predict-weight";
+    const endpoint = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/predict-weight`;
     const payload = rows;
 
     const res = await fetch(endpoint, {

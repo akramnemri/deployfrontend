@@ -76,7 +76,7 @@ export default function WeekPlan() {
         }
       ];
 
-      const res = await fetch("http://localhost:5000/api/plan-week", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/plan-week`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(batchInput)
