@@ -57,7 +57,7 @@ export default function RecommendationMLForm() {
 
     console.log("Sending payload:", payload); // ← DEBUG
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/recommend-ml`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/recommend-ml`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
